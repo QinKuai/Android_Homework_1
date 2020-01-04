@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">在线学习</string>
+    <string name="title_home">主页</string>
+    <string name="title_subscribe">订阅</string>
+    <string name="title_myself">我的</string>
+    <string name="search_hint">搜索你想搜索的</string>
+
+    <string name="login_logout">登录/注册</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="register_page">用户注册</string>
+    <string name="username">用户名:</string>
+    <string name="password">密码:</string>
+    <string name="password_check">确认密码</string>
+    <string name="usuername_defaultMsg">用户昵称</string>
+    <string name="back_to_login">返回登录</string>
+    <string name="passwordCheckError">两次密码输入不同</string>
+    <string name="networkError">网络错误，请重新操作</string>
+    <string name="downloadSuccess">下载成功</string>
+
+    <string name="exitLogin">您已退出登录</string>
+    <string name="exitButton">退出登录</string>
+
+    <string name="courses_list">课程列表</string>
+
+    <string name="appid">101840549</string>
+    <string name="serverip">http://192.168.31.32:8080</string>
+
+    <string name="share">分享</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">Enter it</string>
+
+    <string name="slide_1_title">查看课程详情</string>
+    <string name="slide_1_desc">You can look the course information</string>
+
+    <string name="slide_2_title">记住登录状态</string>
+    <string name="slide_2_desc">The app can remember your registered status</string>
+
+    <string name="slide_3_title">下载课程资源</string>
+    <string name="slide_3_desc">You can download the pdf file of the course</string>
+
+    <string name="slide_4_title">欢迎使用Elearn APP</string>
+    <string name="slide_4_desc">Welcome to use Elearn App!!</string>
+
+    <string name="notification_title">课程提醒</string>
+    <string name="notification_content">欢迎来到ELearn学习社区</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>

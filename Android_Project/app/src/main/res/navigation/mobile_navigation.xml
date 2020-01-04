@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.qinkuai.homework1.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_myself"
+            app:destination="@id/navigation_myself"
+            app:enterAnim="@anim/cut_to_enter"
+            app:exitAnim="@anim/cut_to_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_subscribe"
+        android:name="com.qinkuai.homework1.ui.subscribe.SubscribeFragment"
+        android:label="@string/title_subscribe"
+        tools:layout="@layout/fragment_subscribe" />
+
+    <fragment
+        android:id="@+id/navigation_myself"
+        android:name="com.qinkuai.homework1.ui.myself.MyselfFragment"
+        android:label="@string/title_myself"
+        tools:layout="@layout/fragment_myself_login" />
+</navigation>

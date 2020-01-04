@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.bjtu.android.dao.ElearnUserMapper">
+  <resultMap id="BaseResultMap" type="edu.bjtu.android.entity.ElearnUser">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="headerurl" jdbcType="VARCHAR" property="headerURL"/>
+    <result column="type" jdbcType="VARCHAR" property="type"/>
+    <result column="openid" jdbcType="VARCHAR" property="openid"/>
+  </resultMap>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from elearn_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="edu.bjtu.android.entity.ElearnUser">
+    insert into elearn_user (username, password, headerurl, type, openid)
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{headerURL,jdbcType=VARCHAR}, 
+    	#{type, jdbcType=VARCHAR}, #{openid, jdbcType=VARCHAR})
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="edu.bjtu.android.entity.ElearnUser">
+    update elearn_user
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      headerurl = #{headerURL, jdbcType=VARCHAR}
+      type = #{type, jdbcType=VARCHAR}
+      openid=#{openid, jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select *
+    from elearn_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+    select *
+    from elearn_user
+  </select>
+  
+  <select id="selectByUsername" parameterType="java.lang.String" resultType="edu.bjtu.android.entity.ElearnUser">
+  	select * from elearn_user
+  	where username=#{username, jdbcType=VARCHAR}
+  </select>
+  
+  <select id="selectByOpenid" parameterType="java.lang.String" resultType="edu.bjtu.android.entity.ElearnUser">
+  	select * from elearn_user
+  	where openid=#{openid, jdbcType=VARCHAR}
+  </select>
+  
+</mapper>
